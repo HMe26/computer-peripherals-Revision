@@ -1,0 +1,234 @@
+:root {
+  --primary-color: #0056b3; /* Darker blue */
+  --secondary-color: #28a745; /* Green */
+  --accent-color: #ffc107; /* Yellow */
+  --background-color: #f8f9fa; /* Light gray */
+  --card-background: #ffffff; /* White */
+  --text-color: #343a40; /* Dark gray */
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: "Cairo", sans-serif; /* Arabic font */
+  line-height: 1.8; /* Increased line height for readability */
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  direction: rtl; /* Right-to-left for Arabic */
+  text-align: right;
+  font-size: 1.1em; /* Slightly larger base font size */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif; /* English font for headings */
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+h1 {
+  font-size: 2.8em;
+  text-align: center;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: var(--secondary-color);
+}
+
+h3 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.lecture {
+  background-color: var(--card-background);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.quick-summary {
+  background-color: #f0f8ff; /* Lighter blue for quick summary */
+  border-right: 4px solid var(--primary-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 1.05em;
+  line-height: 1.6;
+  text-align: right; /* Ensure quick summary is RTL */
+}
+.quick-summary h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.explanation-section {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+
+.english-explanation {
+  border-left: 5px solid var(--primary-color);
+  background-color: #e6f0fa; /* Light blue background */
+  padding-left: 20px;
+  direction: ltr; /* Left-to-right for English */
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+
+.arabic-explanation {
+  border-right: 5px solid var(--secondary-color);
+  background-color: #e6fae8; /* Light green background */
+  padding-right: 20px;
+  direction: rtl; /* Right-to-left for Arabic */
+  text-align: right;
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style-type: square;
+  margin-right: 25px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+strong {
+  color: var(--primary-color);
+}
+
+.summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1.05em;
+}
+
+.summary th,
+.summary td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: right;
+}
+
+.summary th {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.questions ol {
+  list-style-type: decimal;
+  margin-right: 25px;
+  padding: 0;
+  font-size: 1.05em;
+}
+
+.questions li {
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+.questions li strong {
+  color: var(--secondary-color);
+}
+
+.questions .answer {
+  color: var(--accent-color);
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  direction: ltr;
+}
+
+.questions .explanation {
+  font-style: italic;
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 5px;
+}
+
+.true-false .explanation {
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 5px;
+}
+.true-false .answer {
+  color: var(--accent-color);
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 1em;
+  }
+  .container {
+    margin: 10px auto;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .english-explanation,
+  .arabic-explanation {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  .lecture {
+    padding: 15px;
+  }
+  .quick-summary {
+    padding: 10px;
+  }
+}
